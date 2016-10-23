@@ -1,0 +1,65 @@
+
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no,maximum-scale=1">
+<title>Musical Instruments</title>
+
+
+<script src="build.js"></script>
+    <meta charset="utf-8"></meta>
+  </head>
+  <body>
+<a-scene auto-enter-vr>
+
+
+  <a-entity position="0 1.8 5.45">
+           <a-camera id="camera" look-controls="" wasd-controls="" camera="">
+             <!-- <a-cursor color="#4CC3D9"></a-cursor> -->
+             <a-ring radius-outer="0.10" radius-inner="0.040" position="-0.5 0 -3" material="color: black; shader: flat" cursor="maxDistance: 30; fuse: true" geometry="" raycaster="">
+               <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+               <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+             </a-ring>
+           </a-camera>
+   </a-entity>
+
+<a-box id="cello" color="#00ccff" height="1" width="1.5" depth="0" position="-2.13 4.05 1.59" scale="1 1 1" material="color:#00ccff" geometry="primitive:box;height:1;width:1;depth:0" href></a-box>
+<a-box id="guitar" color="#00ccff" height="1" width="1.5" depth="0" position="0.41 4.01 1.67" scale="1 1 1" material="color:#00ccff" geometry="primitive:box;height:1;width:1;depth:0"></a-box>
+<a-box id="saxophone" color="#00ccff" height="1" width="1.5" depth="0" position="-0.72 2.43 1.65" scale="1 1 1" material="color:#00ccff" geometry="primitive:box;height:1;width:1.5;depth:0"></a-box>
+
+<a-entity position="-1.96 3.95 2.15" scale="0.8 0.8 0.8" bmfont-text="text:CELLO"></a-entity>
+<a-entity position="0.12 3.86 2.38" scale="0.8 0.8 0.8" bmfont-text="text:GUITAR"></a-entity>
+<a-entity position="-0.99 2.52 2.18" scale="0.8 0.8 0.8" bmfont-text="text:SAXOPHONE"></a-entity>
+
+
+    <a-sky color="#ECECEC"></a-sky>
+      <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light>
+<a-light type="ambient" color="#fff"></a-light>
+<a-camera id="player" position="0 1.8 0"></a-camera>
+
+</a-scene>
+
+
+  </body>
+
+  <script>
+    document.getElementById("cello").addEventListener("click", function(){
+       window.open('cello.html', '_blank');
+  });
+  document.getElementById("guitar").addEventListener("click", function(){
+     window.open('guitar.html', '_blank');
+  });
+  document.getElementById("saxophone").addEventListener("click", function(){
+     window.open('saxophone.html', '_blank');
+  });
+
+  </script>
+
+  <script>
+  AFRAME.registerComponent('auto-enter-vr', {
+    init: function () {
+      this.el.sceneEl.enterVR();
+    }
+  });
+
+  </script>
+</html>

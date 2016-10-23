@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>iphone 5c</title>
+
+<script src="build.js"></script>
+
+ <body>
+
+  <a-scene auto-enter-vr>
+
+    <a-entity collada-model="url(Assets/smartphones/iphone5c/model.dae)" position="-0.07 1.52 -0.38" rotation="0 0 0" scale="0.1 0.1 0.1">
+      <a-animation attribute="rotation" dur="10000" fill="forwards" to="0 360 0" repeat="indefinite"></a-animation>
+    </a-entity>
+
+    <a-entity position="3.44 -1.1 -8" scale="2 2 2" bmfont-text="color:black;text: Red iphone 5c
+
+                    Item Information:
+
+                    Device type: Smartphone
+                    OS: iOS (10.x, 9.x, 8.x, 7.x)
+                    Dimensions: 4.90 x 2.33 x 0.35 inches (124.4 x 59.2 x 8.97 mm)
+                    Weight: 4.66 oz (132 g)
+                    Materials: Main body: plastic.
+                    Colors: Pink, Yellow, Green, Blue, White.">
+    </a-entity>
+    <a-box geometry="primitive:box;depth:0;width:2.9;height:1" material="color:green" color="green" height="1" width="2.9" depth="0" position="4.98 -2.19 -8.57"></a-box>
+    <a-entity position="3.49 -2.03 -7.8" scale="2 2 2" bmfont-text="text:Add to Cart"></a-entity>
+    <a-sky color="#ECECEC"></a-sky>
+  </a-scene>
+  <script>
+  AFRAME.registerComponent('auto-enter-vr', {
+    init: function () {
+      this.el.sceneEl.enterVR();
+    }
+  });
+
+  </script>
+  </body>
+</html>

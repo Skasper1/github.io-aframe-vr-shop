@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Lipstick</title>
+
+<script src="build.js"></script>
+
+ <body>
+
+  <a-scene auto-enter-vr>
+
+
+<a-entity position="0 2.5 2">
+<a-entity collada-model="url(Assets/beauty/lipstick/model.dae)" position="0 -1.07 -2.3" rotation="0 0 0">
+  <a-animation attribute="rotation"
+               dur="10000"
+               fill="forwards"
+               to="0 360 0"
+               repeat="indefinite"></a-animation>
+  </a-entity>
+</a-entity>
+
+<a-entity position="3.44 -1.1 -8" scale="2 2 2" bmfont-text="color:black;text:Red Lipstick
+
+                Item Information:
+                Product Form: Tube
+                For Use On: lips
+                Beauty Purpose: Defining
+                Color Palette: Medium Tones
+                Color Family: Red
+                Capacity Total Volume: .160 ounces
+                Features: Long Lasting
+                Product Warning: no warning applicable ">
+</a-entity>
+<a-box geometry="primitive:box;depth:0;width:2.9;height:1" material="color:green" color="green" height="1" width="2.9" depth="0" position="4.98 -2.19 -8.57"></a-box>
+<a-entity position="3.49 -2.03 -7.8" scale="2 2 2" bmfont-text="text:Add to Cart"></a-entity>
+<a-sky color="#ECECEC"></a-sky>
+  </a-scene>
+  <script>
+  AFRAME.registerComponent('auto-enter-vr', {
+    init: function () {
+      this.el.sceneEl.enterVR();
+    }
+  });
+
+  </script>
+  </body>
+</html>

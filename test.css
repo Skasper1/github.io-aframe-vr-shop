@@ -1,0 +1,16 @@
+body {background-color: powderblue;}
+
+#world {color: red;
+        height: 0px;
+        margin-right:120PX;
+        margin-left: 20px;
+
+}
+
+#hello{
+  margin-top: 290px;
+    margin-bottom: 100px;
+    color: orange;
+    margin-right: 180px;
+    margin-left: 480px;
+}

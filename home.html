@@ -1,0 +1,74 @@
+
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,user-scalable=no,maximum-scale=1">
+
+
+<script src="build.js"></script>
+    <meta charset="utf-8"></meta>
+  </head>
+  <body>
+<a-scene auto-enter-vr>
+
+
+  <a-entity position="0 1.8 5.45">
+           <a-camera id="camera" look-controls="" wasd-controls="" camera="">
+             <!-- <a-cursor color="#4CC3D9"></a-cursor> -->
+             <a-ring radius-outer="0.10" radius-inner="0.040" position="-0.5 0 -3" material="color: black; shader: flat" cursor="maxDistance: 30; fuse: true" geometry="" raycaster="">
+               <a-animation begin="click" easing="ease-in" attribute="scale" fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+               <a-animation begin="fusing" easing="ease-in" attribute="scale" fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+             </a-ring>
+           </a-camera>
+   </a-entity>
+
+<a-box id="box1" color="#00ccff" height="1" width="1.5" depth="0" position="-2.13 4.05 1.59" scale="1 1 1" material="color:#00ccff" geometry="primitive:box;height:1;width:1;depth:0" href="beauty.html" target="_blank"></a-box>
+<a-box id="box2" color="#00ccff" height="1" width="1.5" depth="0" position="0.41 4.01 1.67" scale="1 1 1" material="color:#00ccff" geometry="primitive:box;height:1;width:1;depth:0" target="_blank"></a-box>
+<a-box id="box3" color="#00ccff" height="1" width="1.5" depth="0" position="-2.08 2.43 1.65" scale="1 1 1" material="color:#00ccff" geometry="primitive:box;height:1;width:1;depth:0" href="cameras.html" target="_blank"></a-box>
+<a-box id="box4" color="#00ccff" height="1" width="1.5" depth="0" position="0.41 2.42 1.65" scale="1 1 1" material="color:#00ccff" geometry="primitive:box;height:1;width:1;depth:0" target="_blank"></a-box>
+
+
+<a-entity position="-1.92 3.82 2.15" scale="0.8 0.8 0.8" bmfont-text="text:Beauty
+                                                                      Products
+                                                                      "></a-entity>
+<a-entity position="-0.04 3.69 2.38" scale="0.8 0.8 0.8" bmfont-text="text:Music
+                                                                      Equipments"></a-entity>
+<a-entity position="-1.89 2.61 2.18" scale="0.8 0.8 0.8" bmfont-text="text:Cameras"></a-entity>
+<a-entity position="-0.1 2.72 2.39" scale="0.8 0.8 0.8" bmfont-text="text:Smartphones"></a-entity>
+
+    <a-sky color="#ECECEC"></a-sky>
+      <a-light type="directional" color="#fff" intensity="0.2" position="-1 2 1"></a-light>
+<a-light type="ambient" color="#fff"></a-light>
+<a-camera id="player" position="0 1.8 0"></a-camera>
+
+</a-scene>
+
+
+  </body>
+
+<script>
+  document.getElementById("box1").addEventListener("click", function(){
+     window.open('beauty.html', '_blank');
+});
+
+document.getElementById("box2").addEventListener("click", function(){
+   window.open('musicequipment.html', '_blank');
+});
+
+document.getElementById("box3").addEventListener("click", function(){
+   window.open('cameras.html', '_blank');
+});
+
+document.getElementById("box4").addEventListener("click", function(){
+   window.open('smartphone.html', '_blank');
+});
+</script>
+
+<script>
+AFRAME.registerComponent('auto-enter-vr', {
+  init: function () {
+    this.el.sceneEl.enterVR();
+  }
+});
+
+</script>
+</html>
